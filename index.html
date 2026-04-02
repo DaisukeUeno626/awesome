@@ -26,6 +26,27 @@
 <body>
 
     <h1>山梨県のおすすめスポット</h1>
+    
+    <div style="background: #333; color: #0f0; padding: 10px; display: inline-block; font-family: monospace; border-radius: 5px; margin: 20px 0;">
+    ACCESS: <span id="count">000000</span>
+</div>
+
+<script>
+    // ブラウザに保存されている回数を取得
+    let visitCount = localStorage.getItem('page_view');
+
+    if (visitCount) {
+        visitCount = Number(visitCount) + 1;
+    } else {
+        visitCount = 1;
+    }
+
+    // 新しい回数を保存
+    localStorage.setItem('page_view', visitCount);
+
+    // 6桁の数字に整えて表示 (例: 000005)
+    document.getElementById('count').innerText = visitCount.toString().padStart(6, '0');
+</script>
 
     <div class="container">
         <div class="card food">
