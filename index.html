@@ -1,8 +1,63 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<title>title</title>
+    <meta charset="UTF-8">
+    <title>山梨お出かけガイド</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f9f9f9; text-align: center; color: #333; }
+        h1 { color: #2c3e50; margin-top: 30px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        
+        /* カードのデザイン */
+        .card { background: white; border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        
+        /* リンクボタンのデザイン */
+        .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; }
+        .btn:hover { background-color: #2980b9; }
+
+        /* カテゴリーごとのアイコンの色変え */
+        .food { border-top: 5px solid #e67e22; } /* オレンジ */
+        .nature { border-top: 5px solid #2ecc71; } /* 緑 */
+        .sakura { border-top: 5px solid #ff9ff3; } /* ピンク */
+        .shrine { border-top: 5px solid #8e44ad; } /* 紫 */
+    </style>
 </head>
 <body>
-<font color="red">hello,world!</font>
+
+    <h1>山梨県のおすすめスポット</h1>
+
+    <div class="container">
+        <div class="card food">
+            <h2>🍴 食べ物屋</h2>
+            <p>地元の美味しいグルメ</p>
+            <a href="https://maps.app.goo.gl/FHvWzXSA7Zg6pLwKA" class="btn" target="_blank">地図を見る</a>
+        </div>
+
+        <div class="card food">
+            <h2>🍜 ラーメン屋</h2>
+            <p>こだわりの一杯</p>
+            <a href="https://maps.app.goo.gl/NBcKhSBfiE6E7bWa8" class="btn" target="_blank">地図を見る</a>
+        </div>
+
+        <div class="card nature">
+            <h2>🏔️ 絶景</h2>
+            <p>山梨ならではのパノラマ</p>
+            <a href="https://maps.app.goo.gl/65MovmAEWHPNWxD88" class="btn" target="_blank">地図を見る</a>
+        </div>
+
+        <div class="card sakura">
+            <h2>🌸 桜</h2>
+            <p>春の彩りを楽しむ</p>
+            <a href="https://maps.app.goo.gl/Z6sDBaio9evkegpPA" class="btn" target="_blank">地図を見る</a>
+        </div>
+
+        <div class="card shrine">
+            <h2>⛩️ 神社仏閣</h2>
+            <p>歴史とパワーを感じる</p>
+            <a href="https://maps.app.goo.gl/Pc6nvAfPoNCmsYQH6" class="btn" target="_blank">地図を見る</a>
+        </div>
+    </div>
+
 </body>
 </html>
